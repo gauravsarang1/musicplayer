@@ -1,0 +1,325 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: white;
+}
+#music-player{
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background: linear-gradient(150deg,  
+    rgb(2, 23, 96) 30%,  
+    rgb(31, 31, 119) 50%, 
+    #8c3892 100%  
+    );
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    color: white;
+    overflow-y: auto;
+    
+}
+#logo{
+    color: white;
+}
+.main-nav {
+    position: sticky;
+    top: 0;
+    border-radius: 20px;
+    background: linear-gradient(150deg,  
+        rgb(2, 23, 96) 30%,  
+        rgb(31, 31, 119) 50%, 
+        #8c3892 100%  
+        );
+}
+.main-nav-txt {
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: rgb(181, 181, 181);
+    transition: font-size 0.1s ease-in; /* Corrected */
+}
+
+.main-nav-txt:hover {
+    text-decoration: underline;
+    color: white;
+    text-underline-offset: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: font-size 0.1s ease-in;
+}
+
+#shuffle-button,#play-first-btn{
+    font-weight: bold;
+    background-color: rgba(182, 182, 182, 0.3);
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+}
+#play-first-btn:hover{
+    background-color: rgba(182, 182, 182, 0.5);
+}
+#shuffle-button:hover{
+    background-color: rgba(182, 182, 182, 0.5);
+}
+.song-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    object-fit: cover; 
+}
+
+::-webkit-scrollbar {
+    display: none;
+} 
+
+html {
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+.song:hover{
+    background-color: rgba(255, 255, 255, 0.123);
+    border-radius: 10px;
+}
+.song-artist{
+    font-size: 12px;
+    color: rgb(152, 152, 152);
+}
+.song-duration{
+    color: rgb(133, 130, 130);
+    font-size: 14px;
+}
+#songplaysection {
+    box-shadow: 0px -4px 10px rgba(60, 60, 60, 0.3); 
+    background: linear-gradient(to right, #341180, #83127c); 
+    border-radius: 20px;
+    transform: scaleX(1.05);
+    position: fixed;
+    left: 37.25%;
+    bottom: 1%;
+}
+
+.img-cover{
+    border: black 4px solid;
+    box-shadow: 0px 0px 10px black;
+}
+.song-img-rotate{
+    animation: rotate 20s linear infinite;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.waveform-container {
+    width: 100px;  /* Adjust width as needed */
+    height: 40px;  /* Adjust height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.waveform {
+    display: flex;
+    gap: 3px; /* Space between bars */
+    transform: rotate(180deg); /* Rotate bars */
+}
+
+.bar {
+   width: 4px; /* Thin bars */
+    height: 20px; /* Default height */
+    background: cyan; /* Spotify-like color */
+    animation: bounce 1s infinite ease-in-out alternate;
+}
+
+@keyframes bounce {
+    0% { transform: scaleY(0.4); }
+    100% { transform: scaleY(1); }
+}
+#searchinput{
+    border-radius: 20px;
+    color: black;
+    box-shadow: 0 0 10px rgba(31, 31, 31, 0.5);
+}
+#searchinput::placeholder{
+    color: black;
+}
+#theme-modal{
+    background: linear-gradient(150deg,  
+    rgb(2, 23, 96) 30%,  
+    rgb(31, 31, 119) 50%, 
+    #8c3892 100%  
+    );
+    border-radius: 10px;
+    width: 100%;
+    max-width: 450px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+}
+.themes{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: rgb(70, 70, 70) 5px solid;
+    box-shadow: 0 0 10px rgba(8, 8, 8, 0.5);
+    cursor: pointer;
+}
+.theme-bg-1{
+    background: linear-gradient(150deg,  
+        rgb(2, 23, 96) 30%,  
+        rgb(31, 31, 119) 50%, 
+        #8c3892 100%  
+        );
+}
+.theme-bg-2{
+    background: linear-gradient(150deg,  
+        rgb(96, 2, 2) 30%,  
+        rgb(119, 31, 31) 50%, 
+        #8c3892 100%  
+        );
+}
+.theme-bg-3{
+    background: linear-gradient(150deg,  
+        rgb(2, 87, 2) 30%,  
+        rgb(36, 107, 24) 50%, 
+        #08a933 100%  
+        );
+}
+.theme-bg-4{
+    background: linear-gradient(150deg,  
+        rgb(96, 96, 2) 30%,  
+        rgb(106, 106, 25) 50%, 
+        #b39c2a 100%  
+        );
+}
+.theme-bg-5{
+    background: linear-gradient(150deg,  
+        rgb(2, 96, 96) 30%,  
+        rgb(31, 119, 119) 50%, 
+        #38928c 100%  
+        );
+}
+.theme-bg-6{
+    background: linear-gradient(150deg,  
+        rgb(96, 2, 96) 30%,  
+        rgb(119, 31, 119) 50%, 
+        #8c3892 100%  
+        );
+}
+.theme-bg-7{
+    background: linear-gradient(150deg,  
+        rgb(96, 96, 96) 30%,  
+        rgb(119, 119, 119) 50%, 
+        #8c8c8c 100%  
+        );
+}
+.theme-bg-8{
+    background: linear-gradient(150deg,  
+        rgb(110, 9, 147) 30%,  
+        rgb(118, 23, 115) 50%, 
+        #b636c0 100%  
+        );
+}
+.theme-bg-11 {
+    background-image: linear-gradient(150deg,  
+        #1B1B2F 30%,  
+        #3E1E68 50%, 
+        #E94560 100%  
+    );
+}
+.theme-bg-22 {
+    background-image: linear-gradient(150deg,  
+        #FF7E5F 30%,  
+        #FD3A69 50%, 
+        #783A75 100%  
+    );
+}
+.theme-bg-33 {
+    background-image: linear-gradient(150deg,  
+        #0072ff 30%,  
+        #00c6ff 50%, 
+        #66ffcc 100%  
+    );
+}
+.theme-bg-44 {
+    background-image: linear-gradient(150deg,  
+        #FFA17F 30%,  
+        #EFAF5E 50%, 
+        #B86048 100%  
+    );
+}
+.theme-bg-55 {
+    background-image: linear-gradient(150deg,  
+        #2E8B57 30%,  
+        #206A5D 50%, 
+        #081C15 100%  
+    );
+}
+.theme-bg-66 {
+    background-image: linear-gradient(150deg,  
+        #FF4E50 30%,  
+        #FC913A 50%, 
+        #F9D423 100%  
+    );
+}
+.theme-bg-77 {
+    background-image: linear-gradient(150deg,  
+        #2C5364 30%,  
+        #203A43 50%, 
+        #0F2027 100%  
+    );
+}
+.theme-bg-88 {
+    background-image: linear-gradient(150deg,  
+        #00C9FF 30%,  
+        #92FE9D 50%, 
+        #6B73FF 100%  
+    );
+}
+
+.active-theme{
+    border: white 5px solid;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+#song-Modal{
+ background: linear-gradient(150deg,  
+    rgb(2, 23, 96) 30%,  
+    rgb(31, 31, 119) 50%, 
+    #8c3892 100%  
+    );    
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);    
+    border-radius: 10px;
+    width: 100%;
+    max-width: 450px;
+    height: 100vh;
+}    
+#song-Modal img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.theme-right-btn{
+    position: absolute;
+    left: 38px;
+    top: 30px;
+}
+.dropdown-profile-btn-icon{
+    border-radius: 50%;
+    padding: 5px;
+    
+    background-color: rgb(15, 216, 75);
+}
